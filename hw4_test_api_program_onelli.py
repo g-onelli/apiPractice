@@ -18,15 +18,19 @@ class TestAPIProgram(unittest.TestCase):
         self.assertNotEqual(len(result),0)
 
     def test_storeRepos(self):
-        repos = {}
         result = hw4_api_program_onelli.store_repos(repos)
         self.assertNotEqual(len(result),0)
 
     def test_RepoData(self):
         account = 'richkempinski'
-        repos = {}
         result = hw4_api_program_onelli.get_github_repo_data(repos,account)
         self.assertNotEqual(len(result),0)
 
+    def test_getInfo(self):
+        account = 'richkempinski'
+        result = hw4_api_program_onelli.get_info()
+        
+
+        
 if __name__ == '__main__':
     unittest.main()

@@ -36,6 +36,8 @@ repo to be stored in a dictionary"""
         value = github_data.get(key_number)
         data[key_number] = value['name']
         key_number +=1
+        print(data[key_number])
+
     return data
 
 def get_github_repo_data(data_dict,github_account):
@@ -68,6 +70,7 @@ def combine_repo_and_commits(repo_dict,commit_dict):
 number of commits."""
     key_number = 0
     while key_number<len(repo_dict):
+        print(commit_dict[key_number])
         print("Repository "+repo_dict[key_number]+" has "+commit_dict[key_number]+" commits")
 
 def get_info():
@@ -83,4 +86,4 @@ into the other functions"""
 #    print("answer four")
     ans_five = count_commits(ans_four)
 #    print("answer five")
-    combine_repo_and_commits(ans_four,ans_five)
+    combine_repo_and_commits(ans_two,ans_five)

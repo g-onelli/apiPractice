@@ -22,6 +22,11 @@ class TestAPIProgram(unittest.TestCase):
         repos_response = requests.get('https://api.github.com/repos/'+github_account+'/'+repo_name+'/commits')
         assert_true(account_response.ok)
         assert_true(repos_response.ok)
+
+    def test_name(self):
+        account = 'richkempinski'
+        result = hw4_api_program_onelli.get_github_account(account)
+        self.assertEqual(account,result)
         
     def test_accessAccount(self):
         account = 'richkempinski'
@@ -53,10 +58,9 @@ class TestAPIProgram(unittest.TestCase):
         self.assertEqual(type(answer),'dict')
         self.assertNotEqual(len(answer),0)        
 
-
     def test_getInfo(self):
-        account = 'richkempinski'
         result = hw4_api_program_onelli.get_info()
+        self.assertEqual(result,9)
         
 
         

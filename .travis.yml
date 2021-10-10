@@ -5,4 +5,4 @@ install:
   - pip install requests
 # command to run tests
 script:
-  - python -m unittest TestApiProgram
+  - python -m unittest hw5_test_api_program_onelli
